@@ -4,6 +4,7 @@
 	import { onMount } from 'svelte';
 
 	let input: HTMLInputElement;
+	// add seen check, and go faster.
 
 	async function bootSequence() {
 		for (const message of bootMessages) {

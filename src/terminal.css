@@ -1,6 +1,8 @@
 :root {
 	--terminal-green: #a8c7fb;
 	--terminal-bg: #0a0a0a;
+	--terminal-text-shadow: rgba(191, 213, 252, 0.8);
+	--terminal-scanline: rgba(191, 213, 252, 0.1);
 }
 
 * {
@@ -29,7 +31,7 @@ body {
 	margin-bottom: 2rem;
 	padding: 1rem;
 	color: var(--terminal-green);
-	text-shadow: 0 0 10px rgba(191, 213, 252, 0.8);
+	text-shadow: 0 0 10px var(--terminal-text-shadow);
 	font-size: 0.8rem;
 	line-height: 1.2;
 	background: var(--terminal-bg);
@@ -39,7 +41,7 @@ body {
 	flex: 1;
 	border: 1px solid var(--terminal-green);
 	background: rgba(10, 10, 10, 0.3);
-	overflow-y: auto;
+	overflow-y: hidden;
 	margin-top: 1rem;
 }
 
@@ -60,7 +62,7 @@ body {
 	background: linear-gradient(
 		to bottom,
 		rgba(255, 255, 255, 0),
-		rgba(74, 246, 38, 0.08),
+		var(--terminal-scanline),
 		rgba(255, 255, 255, 0)
 	);
 	position: absolute;
@@ -71,10 +73,10 @@ body {
 }
 
 .terminal {
-	padding: 2rem;
+	padding: 1.2rem;
 	color: var(--terminal-green);
 	font-size: 1.5rem;
-	text-shadow: 0 0 10px rgba(74, 246, 38, 0.8);
+	text-shadow: 0 0 10px var(--terminal-text-shadow);
 	position: relative;
 	z-index: 1;
 }

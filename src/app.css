@@ -26,10 +26,6 @@ main {
 	align-items: center;
 }
 
-.logo-header {
-	position: absolute;
-}
-
 .logo {
 	filter: sepia(100%) hue-rotate(145deg) saturate(1000%);
 	position: absolute;
@@ -37,6 +33,10 @@ main {
 	top: 1rem;
 	user-select: none;
 	pointer-events: none;
+}
+
+#output {
+	text-wrap: wrap;
 }
 
 .terminal-container {
@@ -63,6 +63,22 @@ main::after {
 	animation: scanlines infinite 55s linear;
 	user-select: none;
 	pointer-events: none;
+}
+
+.output-line {
+	text-wrap: auto;
+}
+
+/* Mobile */
+@media (max-width: 640px) {
+	.logo {
+		position: unset;
+		margin-bottom: 1rem;
+	}
+
+	.output-line {
+		font-size: 1.3rem;
+	}
 }
 
 @keyframes scanlines {

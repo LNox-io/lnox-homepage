@@ -26,5 +26,6 @@ export const manifest = [
 	`We are dedicated to creating software that just~ WORKS!~ `,
 	`No more confusion, no more frustration, just pure FUNCTIONALITY! `,
 	`Let us help you rediscover the joy of technology that works for YOU!`,
+	'',
 	`LNOX is a software company, this is what we do best!`
 ];

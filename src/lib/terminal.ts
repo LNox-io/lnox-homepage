@@ -10,6 +10,11 @@ export const bootMessages = [
 	// SOON ^ ^ ^
 ];
 
+function scroll() {
+	const t = document.getElementsByClassName('terminal')[0];
+	t.scrollTop = t.scrollHeight;
+}
+
 export async function type(text: string, delay = 500, typed = false) {
 	const output = document.getElementById('output');
 	// const lines = text.split('\n');
@@ -24,7 +29,7 @@ export async function type(text: string, delay = 500, typed = false) {
 		output.appendChild(wrapper);
 		await typeCharByChar(wrapper, text);
 	}
-	output.scrollTop = output.scrollHeight;
+	scroll();
 
 	return;
 }
