@@ -1,11 +1,11 @@
-import { manifest } from './manifest';
+import { manifestation } from './manifest';
 
 export const bootMessages = [
 	{ text: 'Initializing LNOX Terminal v1.0.', delay: 500 },
 	{ text: 'Memory OK: 640K Base, 64M Extended', delay: 400 },
 	{ text: 'Executing manifest app.', delay: 800 },
 	{ text: '', delay: 800 },
-	...manifest.map((msg) => ({ text: msg, delay: 1000, typed: msg.length > 1 }))
+	...manifestation.map((msg) => ({ text: msg, delay: 1000, typed: msg.length > 1 }))
 	// { text: '> Type your commands below:', delay: 300 }
 	// SOON ^ ^ ^
 ];
@@ -17,7 +17,6 @@ function scroll() {
 
 export async function type(text: string, delay = 500, typed = false) {
 	const output = document.getElementById('output');
-	// const lines = text.split('\n');
 
 	const wrapper = document.createElement('div');
 	wrapper.className = 'output-line';
@@ -56,4 +55,15 @@ function typeCharByChar(container, text) {
 		};
 		typeNextChar();
 	});
+}
+
+export function bootSound() {
+	const sound = document.getElementById('terminal-sound') as HTMLAudioElement;
+	if (sound.paused) {
+		sound.play();
+	}
+
+	if (sound.muted) {
+		sound.muted = false;
+	}
 }

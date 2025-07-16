@@ -1,4 +1,4 @@
-export const manifest = [
+export const manifestation = [
 	`Do you remember the days when you could simply plug in a device and it would WORK? `,
 	`No fuss, no muss! ~Just pure, unadulterated FUNCTIONALITY! `,
 	'',
@@ -10,9 +10,9 @@ export const manifest = [
 	`Do you remember the days when your phone was just a PHONE? `,
 	`You could pick it up, dial a number.`, //, and have a conversation without worrying about dropped calls or dead batteries! ,
 	`It was as simple as that! `,
-	'',
-	`Can you recall the sweet sound of a dial-up modem connecting to the internet? `,
-	`The thrill of hearing that familiar tone, knowing that you were about to embark on a digital adventure?`,
+	// '',
+	// `Can you recall the sweet sound of a dial-up modem connecting to the internet? `,
+	// `The thrill of hearing that familiar tone, knowing that you were about to embark on a digital adventure?`,
 	'',
 	`And what about your computer?`,
 	`Remember when it was just a tool to help you get your work done? No endless updates, no confusing interfaces, just a reliable machine that did what you needed it to do! `,
